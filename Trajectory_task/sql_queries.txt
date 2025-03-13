@@ -1,0 +1,14 @@
+PS C:\Users\mishr\OneDrive\Documents\SMcodes8\webscraping_task\Trajectory_task> setx PATH "%PATH%;C:\Program Files\PostgreSQL\16\bin"
+PS C:\Users\mishr\OneDrive\Documents\SMcodes8\webscraping_task\Trajectory_task>  psql --version
+PS C:\Users\mishr\OneDrive\Documents\SMcodes8\webscraping_task\Trajectory_task> psql -U postgres -d postgres
+Password for user postgres: 
+postgres=# CREATE DATABASE test_db;
+postgres=# \c newdb
+test_db# CREATE TABLE scraper_data (
+test_db(# id SERIAL PRIMARY KEY,
+test_db(# company_name VARCHAR(100),
+test_db(# company_url VARCHAR(2048),
+test_db(# page_links TEXT,       
+test_db(# ai_resp TEXT);
+test_db=# \copy scraper_data(company_name, commpany_url, page_links, ai_resp) FROM 'C:\Users\mishr\OneDrive\Documents\SMcodes8\webscraping_task\Tr
+ajectory_task\output.csv' DELIMITER ',' CSV HEADER;
