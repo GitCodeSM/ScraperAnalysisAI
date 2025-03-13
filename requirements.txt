@@ -4,4 +4,3 @@ streamlit
 openai
 sqlalchemy
 openpyxl
-chromium-browser
