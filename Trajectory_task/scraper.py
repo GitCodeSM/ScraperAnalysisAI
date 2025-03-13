@@ -74,9 +74,9 @@ def main_function(df,  output_file_path):
 
     db_user =  os.getenv("DB_USER")
     db_password =  os.getenv("DB_PASSWORD")
-    db_host =  os.getenv("localhost")
-    db_name =  os.getenv("test_db")
-    db_port =  os.getenv("5432")
+    db_host =  os.getenv("DB_HOST")
+    db_name =  os.getenv("DB_NAME")
+    db_port =  os.getenv("DB_PORT")
     openai_api_key = os.getenv("OPENAI_API_KEY")
     openai.api_key = openai_api_key
 

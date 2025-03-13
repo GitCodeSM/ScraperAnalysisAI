@@ -4,3 +4,4 @@ streamlit
 openai
 sqlalchemy
 openpyxl
+python-dotenv
