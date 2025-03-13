@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 # import os
 
-from scraper import main
+from scraper import main_function
 
 
 st.set_page_config(page_title="Analyse companies website overview and opportunities.")
@@ -42,7 +42,7 @@ if uploaded_file and output_file_path and process_button:
     st.write(df)
 
     st.write("Processing your input data...")
-    df_output = main(df=df, openai_api_key=openai_api_key, output_file_path=output_file_path, db_user=db_user, db_password=db_password, db_host=db_host, db_port=db_port, db_name=db_name)
+    df_output = main_function(df=df, openai_api_key=openai_api_key, output_file_path=output_file_path, db_user=db_user, db_password=db_password, db_host=db_host, db_port=db_port, db_name=db_name)
     st.write("Processed Data:")
 
     # Save the processed file to the provided path
