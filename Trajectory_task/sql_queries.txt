@@ -3,7 +3,7 @@ PS C:\Users\mishr\OneDrive\Documents\SMcodes8\webscraping_task\Trajectory_task> 
 PS C:\Users\mishr\OneDrive\Documents\SMcodes8\webscraping_task\Trajectory_task> psql -U postgres -d postgres
 Password for user postgres: 
 postgres=# CREATE DATABASE test_db;
-postgres=# \c newdb
+postgres=# \c test_db
 test_db# CREATE TABLE scraper_data (
 test_db(# id SERIAL PRIMARY KEY,
 test_db(# company_name VARCHAR(100),
