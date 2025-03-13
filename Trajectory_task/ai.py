@@ -1,5 +1,4 @@
 import openai
-import google.generativeai as genai
 
 class CustomAI:
 
