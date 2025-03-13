@@ -6,7 +6,6 @@
 - clone the github repo: git clone https://github.com/GitCodeSM/ScraperAnalysisAI.git
 - install from the requirements.txt. Ignore package.txt if you have chrome and chrome driver
 - change the directory to Trajectory_task
-- 
 - run the main file: streamlit run streamlit_ui.py
 
 # Manually run using: 
