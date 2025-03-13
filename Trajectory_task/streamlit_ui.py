@@ -30,7 +30,7 @@ if uploaded_file and output_file_path and process_button:
     if uploaded_file.name.endswith(".csv"):
         df = pd.read_csv(uploaded_file)
     elif uploaded_file.name.endswith(".xlsx"):
-        df = pd.read_excel(uploaded_file, engine="openpyxl")
+        df = pd.read_excel(uploaded_file)
 
     # if save_path:
     #     os.makedirs(save_path, exist_ok=True)
