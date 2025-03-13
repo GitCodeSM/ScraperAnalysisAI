@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-# import os
 
 from scraper import main_function
 
@@ -8,17 +7,15 @@ from scraper import main_function
 st.set_page_config(page_title="Analyse companies website overview and opportunities.")
 st.title("Analyse companies website overview and opportunities with AI.")
 
-import streamlit as st
+# # Access API key
+# openai_api_key = st.secrets["api_keys"]["api_key"]
 
-# Access API key
-openai_api_key = st.secrets["api_keys"]["api_key"]
-
-# Access database credentials
-db_user = st.secrets["database"]["user"]
-db_password = st.secrets["database"]["password"]
-db_host = st.secrets["database"]["host"]
-db_name = st.secrets["database"]["name"]
-db_port = st.secrets["database"]["port"]
+# # Access database credentials
+# db_user = st.secrets["database"]["user"]
+# db_password = st.secrets["database"]["password"]
+# db_host = st.secrets["database"]["host"]
+# db_name = st.secrets["database"]["name"]
+# db_port = st.secrets["database"]["port"]
 
 st.write("CSV and Excel File Processor")
 uploaded_file = st.file_uploader("Upload your input file (Excel or CSV)", type=["csv", "xlsx"])
@@ -42,7 +39,8 @@ if uploaded_file and output_file_path and process_button:
     st.write(df)
 
     st.write("Processing your input data...")
-    df_output = main_function(df=df, openai_api_key=openai_api_key, output_file_path=output_file_path, db_user=db_user, db_password=db_password, db_host=db_host, db_port=db_port, db_name=db_name)
+    # df_output = main_function(df=df, openai_api_key=openai_api_key, output_file_path=output_file_path, db_user=db_user, db_password=db_password, db_host=db_host, db_port=db_port, db_name=db_name)
+    df_output = main_function(df=df, output_file_path=output_file_path)
     st.write("Processed Data:")
 
     # Save the processed file to the provided path

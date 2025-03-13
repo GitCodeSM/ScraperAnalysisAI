@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import time
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import openai
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -67,10 +67,17 @@ def get_company_sitemap_urls(df):
 
 
 # if __name__ == "__main__":
-def main_function(df, openai_api_key, output_file_path, db_user, db_password, db_host, db_port, db_name):
+# def main_function(df, openai_api_key, output_file_path, db_user, db_password, db_host, db_port, db_name):
+def main_function(df,  output_file_path):
 
-    # load_dotenv(override=True)
-    # openai_api_key = os.getenv("OPENAI_API_KEY")
+    load_dotenv(override=True)
+
+    db_user =  os.getenv("DB_USER")
+    db_password =  os.getenv("DB_PASSWORD")
+    db_host =  os.getenv("localhost")
+    db_name =  os.getenv("test_db")
+    db_port =  os.getenv("5432")
+    openai_api_key = os.getenv("OPENAI_API_KEY")
     openai.api_key = openai_api_key
 
     if not openai_api_key:
